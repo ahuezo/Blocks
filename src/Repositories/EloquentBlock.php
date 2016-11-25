@@ -22,7 +22,7 @@ class EloquentBlock extends EloquentRepository
     public function render($name = null)
     {
         $block = $this->where('name', $name)
-            ->where(column('status'), '1')
+            ->where('status', '1')
             ->first();
 
         if ($block) {
